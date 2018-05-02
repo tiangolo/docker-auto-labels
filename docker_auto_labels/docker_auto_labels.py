@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 import os
 import random
 
 import docker
 import yaml
-
-# types
-from docker.models.nodes import Node  # noqa
-from typing import List  # noqa
 
 
 def get_content(file_name):
