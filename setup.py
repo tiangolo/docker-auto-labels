@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 """The setup script."""
 
 from setuptools import setup, find_packages
@@ -13,9 +12,13 @@ with open('HISTORY.rst') as history_file:
 
 requirements = ['Click>=6.0', 'docker', 'pyyaml']
 
-setup_requirements = [ ]
+setup_requirements = []
 
-test_requirements = [ ]
+test_requirements = []
+
+description = """Automatically generate Docker Swarm mode node
+labels for each constraint label in each
+service in a Docker Compose / Docker Stack file."""
 
 setup(
     author="Sebastian Ramirez",
@@ -30,7 +33,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    description="Automatically generate Docker Swarm mode node labels for each constraint label in each service in a Docker Compose / Docker Stack file.",
+    description=description,
     entry_points={
         'console_scripts': [
             'docker-auto-labels=docker_auto_labels.cli:main',

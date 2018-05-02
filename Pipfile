@@ -9,13 +9,18 @@ verify_ssl = true
 bumpversion = "==0.5.3"
 wheel = "==0.30.0"
 watchdog = "==0.8.3"
-"flake8" = "==3.5.0"
-tox = "==2.9.1"
+"flake8" = "*"
+tox = "*"
 coverage = "==4.5.1"
 pyinstaller = "==3.3.1"
 sphinx = "==1.7.1"
 twine = "==1.10.0"
 cryptography = "*"
+pylint = "*"
+pylama = "*"
+pycodestyle = "*"
+rope = "*"
+yapf = "*"
 
 
 [packages]

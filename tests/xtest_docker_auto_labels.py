@@ -7,7 +7,6 @@
 import unittest
 from click.testing import CliRunner
 
-from docker_auto_labels import docker_auto_labels
 from docker_auto_labels import cli
 
 
@@ -23,7 +22,7 @@ class TestDocker_auto_labels(unittest.TestCase):
     def test_000_something(self):
         """Test something."""
 
-    def test_command_line_interface(self):
+    def xtest_command_line_interface(self):
         """Test the CLI."""
         runner = CliRunner()
         result = runner.invoke(cli.main)

@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
 import random
-import argparse
 
 import docker
 import yaml
-
 
 # types
 from docker.models.nodes import Node  # noqa
@@ -40,7 +38,8 @@ def get_stack_constraint_labels(content):
                     for cons in val[deploy][placement][constraints]:
                         if cons.startswith('node.labels'):
                             cons_list = cons.split('==')
-                            label = cons_list[0].replace('node.labels.', '').strip()
+                            label = cons_list[0].replace('node.labels.',
+                                                         '').strip()
                             stack_labels.append(label)
     return set(stack_labels)
 
