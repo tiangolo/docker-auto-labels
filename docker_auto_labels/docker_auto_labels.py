@@ -50,6 +50,7 @@ def ensure_existing_labels(existing_labels, stack_labels, nodes):
             node_spec = node.attrs['Spec']
             node_spec['Labels'][label] = 'true'
             node.update(node_spec)
+            node.reload()
 
 
 def process(file_name):
