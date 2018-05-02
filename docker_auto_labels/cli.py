@@ -9,7 +9,7 @@ from . import docker_auto_labels
 
 @click.command()
 @click.argument('docker-file-path')
-def main(docker_file):
+def main(docker_file_path):
     """Read a Docker Compose / Docker Stack file.
     Extract the node label constraints for each service.
     Check that all the labels exist in the Docker Swarm mode cluster.
@@ -22,7 +22,7 @@ def main(docker_file):
     This program will ensure that those labels exist in one node
     in the cluster, if they don't exist, they are created in one
     node chosen randomly."""
-    docker_auto_labels.process(docker_file)
+    docker_auto_labels.process(docker_file_path)
     return 0
 
 
