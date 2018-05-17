@@ -1,0 +1,20 @@
+version: '3'
+services:
+  service1:
+    volumes:
+      - 'app-service1-data:/data'
+    deploy:
+      placement:
+        constraints:
+            - 'node.labels.stack-example-com.app-service1-data == true'
+  service2:
+    volumes:
+      - 'app-service2-data:/data'
+    deploy:
+      placement:
+        constraints:
+            - 'node.labels.stack-example-com.app-service2-data==1'
+
+volumes:
+  app-service1-data:
+  app-service2-data:

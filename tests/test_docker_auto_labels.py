@@ -9,6 +9,8 @@ from docker_auto_labels import cli
 service1_label = 'stack-example-com.app-service1-data'
 service2_label = 'stack-example-com.app-service2-data'
 
+docker_stack_filename = 'test-docker-stack.yml'
+
 client = docker.from_env()
 nodes = client.nodes.list()
 node = nodes[0]
@@ -46,7 +48,7 @@ def test_help():
 def test_simple_run():
     clean_labels()
     runner = CliRunner()
-    result = runner.invoke(cli.main, args=['docker-stack.yml'])
+    result = runner.invoke(cli.main, args=[docker_stack_filename])
     assert result.exit_code == 0
     node.reload()
     node_spec = node.attrs['Spec']
