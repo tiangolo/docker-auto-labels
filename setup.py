@@ -12,9 +12,9 @@ with open('HISTORY.rst') as history_file:
 
 requirements = ['Click>=6.0', 'docker', 'pyyaml']
 
-setup_requirements = []
+setup_requirements = ['pytest-runner']
 
-test_requirements = []
+test_requirements = ['pytest']
 
 description = """Automatically generate Docker Swarm mode node
 labels for each constraint label in each
