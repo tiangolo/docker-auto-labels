@@ -21,6 +21,7 @@ pylama = "*"
 pycodestyle = "*"
 rope = "*"
 yapf = "*"
+pytest = "*"
 
 
 [packages]
