@@ -21,6 +21,8 @@ deploy:
     python: 3.6
     repo: tiangolo/docker-auto-labels
     tags: true
+before_install:
+    - docker swarm init
 install: pip install -U tox-travis
 language: python
 python:
@@ -29,3 +31,6 @@ python:
 - 3.4
 - 2.7
 script: tox
+sudo: required
+services:
+    - docker
