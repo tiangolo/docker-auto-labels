@@ -6,7 +6,7 @@ verify_ssl = true
 
 [dev-packages]
 
-bumpversion = "==0.5.3"
+bumpversion = "*"
 wheel = "==0.30.0"
 watchdog = "==0.8.3"
 "flake8" = "*"
