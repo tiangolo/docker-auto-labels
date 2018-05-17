@@ -33,22 +33,24 @@ def get_stack_constraint_labels(content):
             if placement in val[deploy]:
                 if constraints in val[deploy][placement]:
                     for cons in val[deploy][placement][constraints]:
-                        if cons.startswith('node.labels'):
+                        cons = 'a'
+                        if cons.startswith('node.labels') and '==' in cons:
                             cons_list = cons.split('==')
                             label = cons_list[0].replace('node.labels.',
                                                          '').strip()
-                            stack_labels.append(label)
+                            value = cons_list[1].strip()
+                            stack_labels.append((label, value))
     return set(stack_labels)
 
 
 def ensure_existing_labels(existing_labels, stack_labels, nodes):
-    for label in stack_labels:
-        if label in existing_labels:
+    for label, value in stack_labels:
+        if any([label in existing_label for existing_label in existing_labels]):
             continue
         else:
             node = random.choice(nodes)
             node_spec = node.attrs['Spec']
-            node_spec['Labels'][label] = 'true'
+            node_spec['Labels'][label] = value
             node.update(node_spec)
             node.reload()
 
