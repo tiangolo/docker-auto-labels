@@ -6,6 +6,9 @@ import random
 import docker
 import yaml
 
+# Typings
+from docker.models.nodes import Node  # noqa
+
 
 def get_content(file_name):
     abs_file_name = os.path.abspath(file_name)
@@ -17,8 +20,10 @@ def get_existing_labels(nodes):
     existing_labels = set()
     for node in nodes:
         node_labels = node.attrs['Spec']['Labels']
-        for label in node_labels:
-            existing_labels.add(label)
+        hostname = node.attrs['Description']['Hostname']
+        node_id = node.id
+        for label, value in node_labels.items():
+            existing_labels.add((label, value, hostname, node_id))
     return existing_labels
 
 
@@ -33,7 +38,6 @@ def get_stack_constraint_labels(content):
             if placement in val[deploy]:
                 if constraints in val[deploy][placement]:
                     for cons in val[deploy][placement][constraints]:
-                        cons = 'a'
                         if cons.startswith('node.labels') and '==' in cons:
                             cons_list = cons.split('==')
                             label = cons_list[0].replace('node.labels.',
@@ -45,7 +49,20 @@ def get_stack_constraint_labels(content):
 
 def ensure_existing_labels(existing_labels, stack_labels, nodes):
     for label, value in stack_labels:
-        if any([label in existing_label for existing_label in existing_labels]):
+        this_label_exists = False
+        for existing_label, existing_value, existing_host, node_id in existing_labels:
+            if label in existing_label:
+                this_label_exists = True
+                print(
+                    '--- \n=== \nExisting label: {existing_label} \nWith existing value: {existing_value} \nIn host: {existing_host} \nWith node ID: {node_id} \nMatches required label: {label} \nDeclared with value: {value} \n--- \n'
+                    .format(
+                        existing_label=existing_label,
+                        existing_value=existing_value,
+                        existing_host=existing_host,
+                        node_id=node_id,
+                        label=label,
+                        value=value))
+        if this_label_exists:
             continue
         else:
             node = random.choice(nodes)
@@ -53,6 +70,11 @@ def ensure_existing_labels(existing_labels, stack_labels, nodes):
             node_spec['Labels'][label] = value
             node.update(node_spec)
             node.reload()
+            hostname = node.attrs['Description']['Hostname']
+            node_id = node.id
+            print(
+                '--- \n+++ \nLabel: {label} \nWith value: {value} \nAssigned to node in hostname: {hostname} \nWith node ID: {node_id} \n--- \n'
+                .format(label=label, value=value, hostname=hostname, node_id=node_id))
 
 
 def process(file_name):
