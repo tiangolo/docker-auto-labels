@@ -37,9 +37,9 @@ For examples on how to use it, check: https://github.com/tiangolo/full-stack
 
 This package was created with Cookiecutter_ and the `elgertam/cookiecutter-pipenv`_ project template, based on `audreyr/cookiecutter-pypackage`_.
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`elgertam/cookiecutter-pipenv`: https://github.com/elgertam/cookiecutter-pipenv
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+[Cookiecutter](https://github.com/audreyr/cookiecutter)
+[`elgertam/cookiecutter-pipenv`](https://github.com/elgertam/cookiecutter-pipenv)
+[`audreyr/cookiecutter-pypackage`](https://github.com/audreyr/cookiecutter-pypackage)
 
 ## License
 
