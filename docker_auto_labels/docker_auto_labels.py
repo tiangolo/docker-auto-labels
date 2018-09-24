@@ -51,7 +51,7 @@ def ensure_existing_labels(existing_labels, stack_labels, nodes):
     for label, value in stack_labels:
         this_label_exists = False
         for existing_label, existing_value, existing_host, node_id in existing_labels:
-            if label in existing_label:
+            if label == existing_label:
                 this_label_exists = True
                 print(
                     '--- \n=== \nExisting label: {existing_label} \nWith existing value: {existing_value} \nIn host: {existing_host} \nWith node ID: {node_id} \nMatches required label: {label} \nDeclared with value: {value} \n--- \n'
