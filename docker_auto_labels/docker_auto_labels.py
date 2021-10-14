@@ -13,7 +13,7 @@ from docker.models.nodes import Node  # noqa
 def get_content(file_name):
     abs_file_name = os.path.abspath(file_name)
     with open(abs_file_name) as docker_file:
-        return yaml.load(docker_file)
+        return yaml.safe_load(docker_file)
 
 
 def get_existing_labels(nodes):
