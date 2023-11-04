@@ -33,13 +33,9 @@ same nodes that they were using.
 
 For examples on how to use it, check: https://github.com/tiangolo/full-stack
 
-## Credits
+## Release Notes
 
-This package was created with Cookiecutter_ and the `elgertam/cookiecutter-pipenv`_ project template, based on `audreyr/cookiecutter-pypackage`_.
-
-[Cookiecutter](https://github.com/audreyr/cookiecutter)
-[`elgertam/cookiecutter-pipenv`](https://github.com/elgertam/cookiecutter-pipenv)
-[`audreyr/cookiecutter-pypackage`](https://github.com/audreyr/cookiecutter-pypackage)
+### Latest Changes
 
 ## License
 
