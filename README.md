@@ -37,11 +37,13 @@ For examples on how to use it, check: https://github.com/tiangolo/full-stack
 
 ### Latest Changes
 
-## License
-
-MIT License
-
 #### Internal
 
 * 👷 Add latest-changes GitHub Action. PR [#6](https://github.com/tiangolo/docker-auto-labels/pull/6) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add dependabot. PR [#7](https://github.com/tiangolo/docker-auto-labels/pull/7) by [@tiangolo](https://github.com/tiangolo).
+
+### 0.2.3
+
+## License
+
+MIT License
