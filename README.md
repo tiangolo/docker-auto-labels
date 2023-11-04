@@ -39,6 +39,7 @@ For examples on how to use it, check: https://github.com/tiangolo/full-stack
 
 #### Internal
 
+* 🔧 Add funding. PR [#8](https://github.com/tiangolo/docker-auto-labels/pull/8) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add latest-changes GitHub Action. PR [#6](https://github.com/tiangolo/docker-auto-labels/pull/6) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add dependabot. PR [#7](https://github.com/tiangolo/docker-auto-labels/pull/7) by [@tiangolo](https://github.com/tiangolo).
 
