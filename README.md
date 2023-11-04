@@ -40,3 +40,7 @@ For examples on how to use it, check: https://github.com/tiangolo/full-stack
 ## License
 
 MIT License
+
+#### Internal
+
+* 👷 Add dependabot. PR [#7](https://github.com/tiangolo/docker-auto-labels/pull/7) by [@tiangolo](https://github.com/tiangolo).
