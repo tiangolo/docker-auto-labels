@@ -72,9 +72,8 @@ body:
 
         Write a short description telling me what you are doing, what you expect to happen, and what is currently happening.
       placeholder: |
-        * Open the browser and call the endpoint `/`.
-        * It returns a JSON with `{"message": "Hello World"}`.
-        * But I expected it to return `{"message": "Hello Morty"}`.
+        * Run `docker-auto-labels`.
+        * I expected it would create new virtual machines, but it only added labels.
     validations:
       required: true
   - type: dropdown
