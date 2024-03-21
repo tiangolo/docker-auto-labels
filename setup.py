@@ -10,7 +10,7 @@ with open('README.md') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', 'docker', 'pyyaml']
+requirements = ['Click>=6.0', 'docker', 'pyyaml==5.4.1']
 
 setup_requirements = ['pytest-runner']
 
