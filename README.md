@@ -39,7 +39,7 @@ For examples on how to use it, check: https://github.com/tiangolo/full-stack
 
 #### Refactors
 
-* 👷 Refactor build setup and CI. PR [#11](https://github.com/tiangolo/docker-auto-labels/pull/11) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Refactor build setup and CI, and deprecate package. PR [#11](https://github.com/tiangolo/docker-auto-labels/pull/11) by [@tiangolo](https://github.com/tiangolo).
 
 #### Internal
 
