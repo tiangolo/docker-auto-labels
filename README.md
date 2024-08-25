@@ -35,6 +35,10 @@ same nodes that they were using.
 
 ### Latest Changes
 
+#### Internal
+
+* 🔧 Update PDM config. PR [#12](https://github.com/tiangolo/docker-auto-labels/pull/12) by [@tiangolo](https://github.com/tiangolo).
+
 ### 0.2.4
 
 #### Refactors
