@@ -35,6 +35,8 @@ same nodes that they were using.
 
 ### Latest Changes
 
+### 0.2.4
+
 #### Refactors
 
 * 👷 Refactor build setup and CI, and deprecate package. PR [#11](https://github.com/tiangolo/docker-auto-labels/pull/11) by [@tiangolo](https://github.com/tiangolo).
