@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-"""Console script for docker_auto_labels."""
 import sys
 import click
 
