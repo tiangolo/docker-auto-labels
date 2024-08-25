@@ -1,17 +1,17 @@
+## DEPRECATED 🚨
+
+This project is deprecated. I haven't used it in years, I don't recommend using it.
+
 # Docker Auto Labels
-[![](https://img.shields.io/pypi/v/docker-auto-labels.svg)](https://pypi.python.org/pypi/docker-auto-labels)
-
-[![](https://img.shields.io/travis/tiangolo/docker-auto-labels.svg)](https://travis-ci.org/tiangolo/docker-auto-labels)
-
 
 Automatically generate Docker Swarm mode node labels for each constraint label in each service in a Docker Compose / Docker Stack file.
-
 
 ## Description
 
 This command line package is made to be used with a Docker Swarm mode cluster.
 
 It will:
+
 * Read a Docker Compose / Docker Stack file.
 * Extract the node label constraints for each service.
 * Check that all the labels exist in the Docker Swarm mode cluster.
