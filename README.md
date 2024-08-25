@@ -1,3 +1,7 @@
+## DEPRECATED 🚨
+
+This project is deprecated. I haven't used it in years, I don't recommend using it.
+
 # Docker Auto Labels
 
 Automatically generate Docker Swarm mode node labels for each constraint label in each service in a Docker Compose / Docker Stack file.
