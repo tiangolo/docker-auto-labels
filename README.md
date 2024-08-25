@@ -37,6 +37,10 @@ For examples on how to use it, check: https://github.com/tiangolo/full-stack
 
 ### Latest Changes
 
+#### Refactors
+
+* 👷 Refactor build setup and CI. PR [#11](https://github.com/tiangolo/docker-auto-labels/pull/11) by [@tiangolo](https://github.com/tiangolo).
+
 #### Internal
 
 * 🔧 Add GitHub templates for discussions and issues, and security policy. PR [#9](https://github.com/tiangolo/docker-auto-labels/pull/9) by [@alejsdev](https://github.com/alejsdev).
