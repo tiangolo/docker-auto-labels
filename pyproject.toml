@@ -27,3 +27,14 @@ Homepage = "https://github.com/tiangolo/docker-auto-labels"
 
 [project.scripts]
 docker-auto-labels = "docker_auto_labels.cli:main"
+
+[tool.pdm]
+version = { source = "file", path = "src/docker_auto_labels/__init__.py" }
+distribution = true
+
+[tool.pdm.build]
+source-includes = [
+    "tests/",
+    "requirements*.txt",
+    "scripts/",
+]
