@@ -31,8 +31,6 @@ to each stateful service (by this command, right before the deployment).
 And for all subsequent deployments, the stateful services will go to the
 same nodes that they were using.
 
-For examples on how to use it, check: https://github.com/tiangolo/full-stack
-
 ## Release Notes
 
 ### Latest Changes
