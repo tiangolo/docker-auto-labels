@@ -37,6 +37,7 @@ same nodes that they were using.
 
 #### Internal
 
+* 👷 Update `latest-changes` GitHub Action. PR [#13](https://github.com/tiangolo/docker-auto-labels/pull/13) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Update PDM config. PR [#12](https://github.com/tiangolo/docker-auto-labels/pull/12) by [@tiangolo](https://github.com/tiangolo).
 
 ### 0.2.4
